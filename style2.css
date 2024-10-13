@@ -1,0 +1,631 @@
+                            * {
+                                margin: 0;
+                                padding: 0;
+                                box-sizing: border-box;
+
+                                .uchen-regular {
+                                    font-family: "Uchen", serif;
+                                }
+                            }
+
+                            .all-content {
+                                background: #4b2906;
+                            }
+
+                            #navbar {
+                                background-color: #58330e;
+                                padding-left: 60px;
+                                font-weight: bold;
+                            }
+
+                            #logo {
+                                font-size: 23px;
+                                color: white;
+                            }
+
+                            #logo img {
+                                margin-bottom: 15px;
+                            }
+
+                            .navbar-nav {
+                                margin-left: 30%;
+                            }
+
+                            #navbardrop {
+                                padding: 15px;
+                                color: rgb(48, 77, 241);
+                                padding-top: 5px;
+                            }
+
+                            .dropdown-menu .dropdown-item {
+                                color: rgb(247, 236, 236);
+                                background: transparent;
+                                background-color: rgba(161, 109, 14, 1);
+                            }
+
+                            .nav-link {
+                                color: rgb(243, 232, 232);
+                                font-weight: bold;
+                                text-shadow: 1px 1px 1px black;
+                                margin-left: 15px;
+                                transition: 0.5s ease;
+                            }
+
+                            .nav-link:hover {
+                                background-color: rgba(161, 109, 14, 1);
+                                color: white;
+                                border-radius: 5px;
+                            }
+
+                            .icons {
+                                margin-left: 30px;
+                            }
+
+                            .icons img {
+                                margin-left: 10px;
+                                transition: 0.5s ease;
+                                cursor: pointer;
+                            }
+
+                            .icons img:hover {
+                                transform: translateY(-5px);
+                            }
+
+                            @media screen and (max-width: 330px) {
+                                #logo {
+                                    font-size: 15px;
+                                }
+                            }
+
+
+                           
+
+                            /* home section */
+
+                            .home {
+                                width: 100%;
+                                height: 900px;
+                                display: flex;
+                                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(images/cake12.avif);
+                                background-size: cover;
+                                align-items: normal;
+                                margin-top: 15px;
+                                justify-content: first baseline;
+                                color: floralwhite;
+                                flex-wrap: wrap;
+                                position: relative;
+                                z-index: 0;
+                            }
+
+                            .home .img {
+                                flex: 1 1 400px;
+                            }
+
+                            .home .img img {
+                                width: 100%;
+                            }
+
+                            .home .content {
+                                flex: 1 1 400px;
+                                margin-left: 60px;
+                            }
+
+                            .content h3 {
+                                color: white;
+                                font-size: 60px;
+                                font-weight: bold;
+                                text-shadow: 1px 1px 1px black;
+                            }
+
+                            .content h2 {
+                                font-size: 60px;
+                                color: rgb(253, 203, 203);
+                                text-shadow: 1px 1px 1px black;
+                            }
+
+                            .changecontent::after {
+                                content: '';
+                                color: rgb(236, 137, 137);
+                                animation: changetext 7s infinite linear;
+                                font-weight: bold;
+                            }
+
+                            @keyframes changetext {
+                                0% {
+                                    content: "Birthday Cake";
+                                }
+
+                                20% {
+                                    content: "Chocolate Cake";
+                                }
+
+                                50% {
+                                    content: "Party Cake";
+                                }
+
+                                60% {
+                                    content: "Slice Cake";
+                                }
+
+                                100% {
+                                    content: "Cup Cake";
+                                }
+                            }
+
+                            .content p {
+                                color: white;
+                                font-weight: bold;
+                                text-shadow: 1px 1px 1px black;
+                            }
+
+                            .content .btn {
+                                width: 110px;
+                                height: 38px;
+                                background-color: #573818;
+                                color: white;
+                            }
+
+                            @media screen and (max-width:800px) {
+                                .content h3 {
+                                    font-size: 50px;
+                                }
+                            }
+
+                            @media screen and (max-width:860px) {
+                                .home {
+                                    height: 120vh;
+                                }
+                            }
+
+                            @media screen and (max-width:560px) {
+                                .home {
+                                    height: 10vh;
+                                }
+                            }
+
+                            @media screen and (max-width:330px) {
+                                .content h2 {
+                                    font-size: 30px;
+                                }
+
+                                .content h3 {
+                                    font-size: 30px;
+                                }
+                            }
+
+                            /* home section end */
+                            /* top card  */
+
+                            #box {
+                                margin-top: 50px;
+                            }
+
+                            #box .card {
+                                box-shadow: 0px 0px 5px black;
+                                margin-top: 10px;
+                                transition: 0.5s ease;
+                                cursor: pointer;
+                            }
+
+                            #box .card:hover {
+                                transform: translateY(-10px);
+                            }
+
+                            /* top card end  */
+                            /* banner  */
+
+                            .banner {
+                                width: 100%;
+                                height: 0cqb60vh;
+                                display: flex;
+                                background-image: linear-gradient#573818;
+                                background-size: cover;
+                                align-items: center;
+                                justify-content: center;
+                                flex-wrap: wrap;
+                                box-shadow: 0px 0px 10px black;
+                                margin-top: 50px;
+                            }
+
+                            .banner .img {
+                                flex: 1 1 400px;
+                            }
+
+                            .banner .img img {
+                                width: 100%;
+                            }
+
+                            .banner .content {
+                                flex: 1 1 400px;
+                                margin-left: 60px;
+                                margin-top: 60px;
+                            }
+
+                            .banner .content h3 {
+                                color: rgba(161, 109, 14, 1);
+                                font-weight: bold;
+                                text-shadow: 1px 1px1px black;
+                            }
+
+                            .banner .content p {
+                                color: rgba(161, 109, 14, 1);
+                            }
+
+                            #btnorder button {
+                                width: 150px;
+                                height: 32px;
+                                letter-spacing: 5px;
+                                background-color: rgba(161, 109, 14, 1);
+                                color: white;
+                                border-radius: 5px;
+                                cursor: pointer;
+                            }
+
+                            @media screen and (max-width:800px) {
+                                .banner .content h3 {
+                                    font-size: 50px;
+                                }
+                            }
+
+                            @media screen and (max-width:855px) {
+                                height:100vh;
+                            }
+
+                            /* banner end  */
+                            /* product cards */
+
+                            #product-card h1 {
+                                text-align: center;
+                                font-weight: bold;
+                                color: white;
+                                margin-top: 20px;
+                                color: rgb(122, 88, 25);
+                                text-shadow: 1px 1px 1px black;
+                                border-bottom: 2px solid rgba(161, 109, 14, 1);
+                            }
+
+                            #product-card .card {
+                                background-color: rgb(127, 88, 16);
+                                box-shadow: 0 0 3px rgb(5, 5, 5);
+                                transition: 0.5s ease;
+                                border-radius: 5px;
+                                cursor: pointer;
+                            }
+
+                            #product-card .card:hover {
+                                transform: translateY(-10px);
+                            }
+
+                            .all-content {
+                                background-color: hwb(12 94% 0%);
+                            }
+
+                            .overlay {
+                                display: block;
+                                opacity: 0;
+                                position: absolute;
+                                top: 10%;
+                                margin-left: 0;
+                                width: 70px;
+                            }
+
+                            #product-card .card:hover .overlay {
+                                opacity: 1;
+                                margin-left: 5%;
+                                transition: 0.5s ease;
+                            }
+
+                            .overlay i img {
+                                background-color: #f0ece9;
+                                height: 30px;
+                                width: 30px;
+                                font-size: 20px;
+                                padding: 7px;
+                                margin: -20%;
+                                margin-bottom: 5%;
+                                cursor: pointer;
+                            }
+
+                            .overlay .btn-secondary {
+                                background: transparent !important;
+                                border: none;
+                                box-shadow: none;
+                            }
+
+                            #product-card h3 {
+                                color: white;
+                                text-shadow: 1px 1px 1px black
+                            }
+
+                            .star .checked {
+                                color: yellow;
+                            }
+
+                            #product-card p {
+                                color: #ece9e5;
+                                font-weight: bold;
+                            }
+
+                            #product-card h6 {
+                                font-size: 15px;
+                                color: #e9e4e0;
+                                font-weight: bold;
+                                padding-right: 10px;
+                            }
+
+                            #product-card h6 span button {
+                                width: 100px;
+                                height: 26px;
+                                background: transparent;
+                                letter-spacing: 3px;
+                                border: 2px solid #573818;
+                                border-radius: 5px;
+                                float: right;
+                                transition: 0.5s ease;
+                                cursor: pointer;
+                                margin-left: 3px;
+                            }
+
+                            #product-card h6 span button:hover {
+                                background-color: #ba9577;
+                                color: white;
+                            }
+
+                            /* gallery */
+
+                            #gallery {
+                                margin-top: 50px;
+                            }
+
+                            #box h1 {
+                                text-align: center;
+                                font-weight: bold;
+                                margin-top: 50px;
+                                color: rgba(161, 109, 14, 1);
+                                text-shadow: 1px 1px 1px black;
+                                border-bottom: 2px solid rgba(161, 109, 14, 1);
+                            }
+
+                            #gallery .card {
+                                box-shadow: 3px 3px3px black;
+                                cursor: pointer;
+                                padding-left: 50px;
+                                margin: 30px;
+                            }
+
+                            #gallery .overlay {
+                                opacity: 0;
+                                width: 100%;
+                                color: white;
+                                text-shadow: 1px 1px 1px black;
+                            }
+
+                            #gallery .card:hover .overlay {
+                                opacity: 5;
+                                margin-top: 20%;
+                                transition: 0.5s ease;
+                            }
+
+                            /* gallery end */
+                            /* about  */
+
+                            #about {
+                                margin-top: 50px;
+                            }
+
+                            #about h1 {
+                                text-align: center;
+                                font-weight: bold;
+                                margin-top: 50px;
+                                color: rgba(161, 109, 14, 1);
+                                text-shadow: 1px 1px 1px black;
+                                border-bottom: 2px solid rgba(161, 109, 14, 1);
+                            }
+
+                            #about .card {
+                                background-color: rgba(161, 109, 14, 1);
+                                box-shadow: 0px 0px 5px black;
+                            }
+
+                            #about p {
+                                color: rgba(161, 109, 14, 1);
+                                text-shadow: 1px 1px 1px black;
+                                font-weight: bold;
+                            }
+
+                            #bt button {
+                                width: 150px;
+                                height: 32px;
+                                letter-spacing: 3px;
+                                background-color: rgba(161, 109, 14, 1);
+                                color: white;
+                                border: none;
+                                cursor: pointer;
+                            }
+
+                            @media screen and (max-width:1000px) {
+                                #about p {
+                                    font-size: 10px;
+                                }
+                            }
+
+                            @media screen and (max-width:760px) {
+                                #about p {
+                                    font-size: 20px;
+                                }
+                            }
+
+                            /* about end  */
+                            /* contact  */
+
+                            #contact {
+                                margin-top: 100px;
+                            }
+
+                            #contact h1 {
+                                text-align: center;
+                                font-weight: bold;
+                                color: white;
+                                margin-top: 50px;
+                                color: rgba(161, 109, 14, 1);
+                                text-shadow: 1px 1px 1px black;
+                                border: 2px solid rgba(161, 109, 14, 1);
+                            }
+
+                            #contact input {
+                                background-color: #573818;
+                                color: white;
+                            }
+
+                            #contact input::placeholder {
+                                color: white;
+                            }
+
+                            #contact textarea {
+                                background-color: rgb(163, 111, 15);
+                                color: white;
+                            }
+
+                            #contact textarea:placeholder {
+                                color: white;
+                            }
+
+                            #messagebtn {
+                                text-align: center;
+                            }
+
+                            #messagebtn button {
+                                width: 200px;
+                                height: 30px;
+                                letter-spacing: 3px;
+                                font-weight: bold;
+                                background: transparent;
+                                border: 2px solid rgb(231, 174, 174);
+                                color: rgb(104, 15, 15);
+                                transition: 0.5s;
+                                cursor: pointer;
+                            }
+
+                            #messagebtn button:hover {
+                                background-color: rgba(161, 109, 14, 1);
+                            }
+
+                            /* contact end  */
+                            /* footer  */
+
+                            #footer {
+                                width: 100%;
+                                background-color: #573818;
+                                box-shadow: 0px 0px 5px black;
+                                margin-top: 100px;
+                            }
+
+                            #footer p {
+                                color: white;
+                            }
+
+                            .icons i {
+                                align-items: center;
+                            }
+
+                            .icons {
+                                background-color: white;
+                                color: #573818;
+                                border-radius: 50px;
+                                padding: 6px;
+                                font-size: 30px;
+                                transition: 0.5s;
+                                cursor: pointer;
+                            }
+
+                            .icons i:hover {
+                                background-color: rgba(161, 109, 14, 1);
+                                color: white;
+                            }
+
+                            .copyright {
+                                color: white;
+                                margin-top: 20px;
+                            }
+
+                            /* footer end  */
+
+                            html {
+                                scroll-behavior: smooth;
+                                background-color: rgba(161, 109, 14, 1);
+                                border-radius: 50px;
+                                height: 50px;
+                                bottom: 40px;
+                                right: 50px;
+                                text-decoration: center;
+                                text-align: center;
+                                line-height: 50px;
+                            }
+
+                            .is-invalid {
+                                border-color: red;
+                                background-color: #f8d7da;
+                            }
+
+                            /* // navigation bar of chocolate,pestry,birthday cakes  */
+
+                            .navbar {
+                                background-color: #f8f9fa;
+                                padding: 10px;
+                                border-bottom: 1px solid #ddd;
+                            }
+
+                            .navbar .navbar-brand {
+                                font-size: 1.2rem;
+                                font-weight: bold;
+                            }
+
+                            .navbar .navbar-nav {
+                                margin-left: auto;
+                            }
+
+                            .navbar .nav-link {
+                                color: #007bff;
+                                font-size: 1rem;
+                            }
+
+                            .navbar .nav-link:hover {
+                                color: #0056b3;
+                            }
+
+                            .card {
+                                margin-bottom: 20px;
+                                border: 1px solid #ddd;
+                                border-radius: 5px;
+                            }
+
+                            .card-body {
+                                padding: 15px;
+                            }
+
+                            .star i {
+                                color: #f39c12;
+                            }
+
+                            .remove-btn {
+                                color: red;
+                                cursor: pointer;
+                            }
+
+
+                            /* Add this style for the 'Back to Homepage' link */
+                            .navbar-brand {
+                                color: rgba(161, 109, 14, 1);
+                                /* Change to your desired color */
+                                font-weight: bold;
+                                transition: background-color 0.3s ease, color 0.3s ease;
+                                padding: 10px 20px;
+                                border-radius: 5px;
+                            }
+
+                            .navbar-brand:hover {
+                                background-color: rgba(161, 109, 14, 1);
+                                color: #fff;
+                                text-decoration: none;
+                                /* Removes underline when hovered */
+                            }

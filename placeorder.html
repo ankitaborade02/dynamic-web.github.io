@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url(images/cupcake16.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+        
+        fieldset {
+            color: rgb(6, 49, 106);
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background: transparent;
+            margin-right: 340px;
+        }
+        
+        legend {
+            color: rgb(235, 84, 28);
+            text-align: center;
+        }
+        
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+        
+        #name,
+        #order,
+        #phn,
+        #add {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            border-radius: 6px;
+        }
+        
+        #btn {
+            padding: 10px;
+            background-color: rgb(111, 237, 220);
+            cursor: pointer;
+            /* color: white;  */
+        }
+        
+        #btn:hover {
+            background-color: rgb(52, 138, 11);
+            color: white;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- placeorder  -->
+
+    <form id="orderForm" autocomplete="off">
+        <fieldset>
+            <legend>Place The Order</legend>
+    
+            <label for="name">Customer Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required><br><br>
+    
+            <label for="order">Order Date:</label>
+            <input type="date" id="order" required><br><br>
+    
+            <label for="phn">Phone No:</label>
+            <input type="text" id="phn" maxlength="10" placeholder="Enter 10-digit phone number" required><br><br>
+    
+            <label for="add">Address:</label>
+            <textarea id="add" placeholder="Enter your address" required></textarea><br><br>
+    
+            <button type="submit" id="btn">Proceed To Payment</button>
+        </fieldset>
+    </form>
+
+    
+
+
+<!-- JS File Link -->
+<script src="cake.js">
+
+</script>
+</body>
+</html>
+
+</body>
+
+</html>

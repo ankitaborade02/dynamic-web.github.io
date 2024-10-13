@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0f0e0e;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-image: url(images/thankyou.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+
+        .thank-you-container {
+           background: transparent;
+            padding: 40px;
+            border-radius: 8px;
+            /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+            max-width: 600px;
+            width: 100%;
+            margin-left: 600px;
+        }
+
+        h1 {
+            color: #267426;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color:rgb(8, 0, 0);
+            margin: 10px 0;
+        }
+
+        .order-summary {
+          background: transparent;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2b802b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #41b941;
+        }
+        h3{
+            color: rgb(246, 29, 29);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="thank-you-container">
+        <h1>Thank You!</h1>
+        <p>Your order has been placed successfully.</p>
+        <p> hope you enjoy your cake!!  VISIT AGAIN...</p>
+
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <p><strong>Customer Name:</strong> <span id="customerName"></span></p>
+            <p><strong>Order Date:</strong> <span id="orderDate"></span></p>
+            <p><strong>Address:</strong> <span id="address"></span></p>
+        </div>
+
+        <a href="index.html" class="button">Back to Homepage</a>
+    </div>
+
+    <script>
+        // Retrieve data from localStorage and display it
+        document.getElementById('customerName').textContent = localStorage.getItem('customerName');
+        document.getElementById('orderDate').textContent = localStorage.getItem('orderDate');
+        document.getElementById('address').textContent = localStorage.getItem('address');
+
+        // Clear localStorage after displaying the thank you page
+        localStorage.clear();
+    </script>
+
+</body>
+</html>

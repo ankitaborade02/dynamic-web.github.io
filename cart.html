@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Uchen', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            color: #007bff;
+            font-size: 1rem;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #0056b3;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .cart-item {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            padding: 15px;
+            transition: box-shadow 0.3s ease;
+        }
+        .cart-item:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .cart-item img {
+            max-width: 120px;
+            border-radius: 5px;
+        }
+        .cart-item h5 {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .cart-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+        .remove-btn, .order-btn {
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .remove-btn {
+            color: #dc3545;
+        }
+        .order-btn {
+            color: #28a745;
+        }
+        .remove-btn:hover {
+            text-decoration: underline;
+        }
+        .order-btn:hover {
+            text-decoration: underline;
+        }
+        .empty-cart {
+            text-align: center;
+            padding: 50px;
+            color: #777;
+        }
+        .back-btn {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .back-btn a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .back-btn a:hover {
+            text-decoration: underline;
+        }
+        .my-4{
+            padding-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">Back to Homepage</a>
+        <h1 class="my-4">Your Cart</h1>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <div id="cart-items" class="row">
+            <!-- Cart items will be inserted here -->
+        </div>
+        <div id="empty-cart" class="empty-cart" style="display: none;">
+            <p>Your cart is empty.</p>
+        </div>
+        <div class="back-btn">
+           
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartItemsContainer = document.getElementById('cart-items');
+            let emptyCartMessage = document.getElementById('empty-cart');
+
+            if (cart.length === 0) {
+                cartItemsContainer.style.display = 'none';
+                emptyCartMessage.style.display = 'block';
+                return;
+            }
+
+            cart.forEach((item, index) => {
+                let cartItemHTML = `
+                    <div class="col-md-4 cart-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="${item.image}" alt="${item.name}">
+                            </div>
+                            <div class="col-md-8">
+                                <h5>${item.name}</h5>
+                                <p>${item.price}</p>
+                                <span class="remove-btn" onclick="removeFromCart(${index})">Remove</span>
+                                <span class="order-btn" onclick="placeOrder(${index})">Order Now</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                cartItemsContainer.innerHTML += cartItemHTML;
+            });
+        });
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            location.reload();
+        }
+
+        function placeOrder(index) {
+            // Navigate to the placeorder.html page
+            window.location.href = 'placeorder.html';
+        }
+    </script>
+</body>
+</html>
